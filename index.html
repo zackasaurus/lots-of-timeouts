@@ -8,13 +8,11 @@
   </head>
   <body>
     <script>
-      const ITERATIONS = 100;
-      console.log(`${ITERATIONS} timeouts to call`);
-      for (let i = 0; i < ITERATIONS; i++) {
-        setTimeout(() => {
-          console.log(`I am callback ${i + 1}`);
-        }, Math.random() * 10000);
-      }
+      let minutesElapsed = 0;
+      setInterval(() => {
+        minutesElapsed++;
+        console.log(`${minutesElapsed} minutes have elapsed`);
+      }, 60 * 1000);
     </script>
   </body>
 </html>
